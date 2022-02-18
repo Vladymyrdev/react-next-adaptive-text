@@ -1,3 +1,6 @@
 module.exports = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+	resolve: {
+		extensions: ['.js', '.jsx', '.ts', '.tsx', '.png'],
+	},
+};
