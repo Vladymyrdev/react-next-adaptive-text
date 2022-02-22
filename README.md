@@ -23,3 +23,10 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 ## Description
 
 This single page app is built using Next.js and is responsive for both desktop and mobile devices. When you click on the Search button, you go to the next block where you can see the selection of tabs.
+
+## :hammer: Used technologies:
+
+- Next.js
+- React.JS + hooks
+- Typescript
+- React-Bootstrap
