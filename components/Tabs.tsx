@@ -50,21 +50,8 @@ export default function ControlledTabs() {
 							<h1>£1000pcm</h1>
 							<Button variant="outline-danger">81% Confidence Level</Button>
 						</div>
-						<div
-							style={{
-								maxWidth: '770px',
-								display: 'flex',
-								flexDirection: 'column',
-								margin: '20px auto',
-							}}
-						>
-							<span
-								style={{
-									fontSize: '14px',
-									lineHeight: '25px',
-									color: '#8D8D8D',
-								}}
-							>
+						<div className={styles.subtab}>
+							<span>
 								Our partners check many datasets, property sales and recent
 								valuations to create an instant estimate. This is great as a
 								quick guide but shouldn&apos;t be wholly relied upon if you are

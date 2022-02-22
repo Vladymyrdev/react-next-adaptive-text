@@ -10,7 +10,7 @@ import styles from '../styles/Home.module.css';
 
 function AvmGraph() {
 	return (
-		<div style={{ marginTop: '40px' }}>
+		<div className={styles.avm_wrapp}>
 			<span>
 				Powered by <Image src={Logo} alt="logo" />
 			</span>

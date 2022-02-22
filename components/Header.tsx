@@ -2,12 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 // @ts-ignore
 import Statistic from '../assets/arrow-chart-677.svg';
-import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 // @ts-ignore
 import Select from './common/Select.tsx';
 // @ts-ignore
 import Input from './common/Input.tsx';
+import { headerOptions } from '../constants.ts';
+
+import styles from '../styles/Home.module.css';
 
 export default function Header() {
 	return (
@@ -20,13 +22,16 @@ export default function Header() {
 					<div className={styles.select}>
 						<Image src={Statistic} alt="statistic" />
 						<Select className={styles.form_select}>
-							<option>Research</option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							{headerOptions?.map((opt) => (
+								<option
+									key={opt.id}
+									value={opt.label !== 'Research' && opt.label}
+								>
+									{opt.label}
+								</option>
+							))}
 						</Select>
 					</div>
-
 					<div className={styles.search}>
 						<Input
 							className={styles.search_input}

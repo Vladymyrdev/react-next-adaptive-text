@@ -13,7 +13,12 @@ import ControlledTabs from '../components/Tabs.tsx';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-	const [click, setClick] = useState(false);
+	const [onSearchClick, setOnSearchClick] = useState(false);
+
+	const onHandleSearchClick = () => {
+		setOnSearchClick((prev) => !prev);
+	};
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -24,8 +29,8 @@ export default function Home() {
 			<Header />
 			<main>
 				<div className={styles.content}>
-					{!click && <Title />}
-					<div className={click && styles.search_max}>
+					{!onSearchClick && <Title />}
+					<div className={onSearchClick && styles.search_max}>
 						<div className={styles.content_search}>
 							<Form>
 								<Row className="g-2">
@@ -72,17 +77,17 @@ export default function Home() {
 										<Button
 											variant="danger"
 											style={{ width: '100%', height: '100%' }}
-											onClick={() => setClick((prev) => !prev)}
+											onClick={onHandleSearchClick}
 										>
-											{click ? 'Update' : 'Search'}
+											{onSearchClick ? 'Update' : 'Search'}
 										</Button>
 									</Col>
 								</Row>
 							</Form>
 						</div>
 					</div>
-					{click && <ControlledTabs />}
-					{!click && <AvmGraph />}
+					{onSearchClick && <ControlledTabs />}
+					{!onSearchClick && <AvmGraph />}
 				</div>
 			</main>
 			<Footer />

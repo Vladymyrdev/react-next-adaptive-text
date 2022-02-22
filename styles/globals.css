@@ -23,6 +23,10 @@ main {
 	background-color: #f3f4fa;
 }
 
+label {
+	opacity: 0.5;
+}
+
 .nav-link {
 	color: #343434 !important;
 }
@@ -34,4 +38,15 @@ main {
 .nav-tabs .nav-link.active {
 	border-bottom: 2px solid #f95258 !important;
 	font-weight: bold !important;
+}
+@media (max-width: 480px) {
+	.row {
+		display: block !important;
+		width: 100vw;
+		--bs-gutter-y: 2px !important;
+		--bs-gutter-x: 2.5rem !important;
+	}
+	.nav {
+		justify-content: space-between !important;
+	}
 }
